@@ -22,6 +22,9 @@ function createBoxes(amount) {
 }
 
 create.addEventListener("click", () => {
+  if (box.innerHTML !== '') {
+    destroyBoxes();
+  }
   if (number.value > 100 || isNaN(number.value) || number.value < 1) {
     alert("value must be between 1 and 100")
   }

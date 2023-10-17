@@ -15,18 +15,10 @@ const images = [
 const ul = document.querySelector('.gallery');
 
 const listElement = images.map(img => 
-  `<li class="item"><img src="${img.url}" alt="${img.alt}"></img></li>`).join("");
+  `<li class="item"><img src="${img.url}" alt="${img.alt}" width="400" height="250"></img></li>`).join("");
 
 ul.insertAdjacentHTML("afterbegin", listElement);
 const li = document.querySelectorAll(".item");
 ul.style.display = "flex";
 ul.style.gap = "10px";
-li.forEach(item => {
-  item.style.listStyle = "none";
-})
-
-const img = ul.querySelectorAll("img");
-img.forEach(item => {
-  item.style.width = "400px"
-  item.style.height = "250px"
-})
+ul.style.listStyle = "none";

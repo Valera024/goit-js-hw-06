@@ -2,7 +2,8 @@ const input = document.querySelector("#name-input");
 const span = document.querySelector("#name-output");
 
 input.addEventListener("input", (event) => {
-    if (event.currentTarget.value === "") {
+    const trimValue = event.currentTarget.value.trim();
+    if (trimValue === "") {
         span.textContent = "Anonymous";
     }
     else {

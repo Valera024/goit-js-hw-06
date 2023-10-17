@@ -9,7 +9,7 @@ function login(event) {
     const password = form.elements.password.value;
     
     if (email === "" || password === "") {
-        alert("Fill in all fields!");
+       return alert("Fill in all fields!");
     }
     const user = { email, password };
     console.log(user)
